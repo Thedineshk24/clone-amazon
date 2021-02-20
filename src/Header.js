@@ -7,10 +7,16 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 // react-router-dom
 import { Link } from "react-router-dom";
 
+// redux
+import { useSelector } from "react-redux";
+import { selectBasket } from "./features/basketSlice";
+
 // css
 import "./Header.css";
 
 const Header = () => {
+	const basket = useSelector(selectBasket);
+
 	return (
 		<div className="header">
 			<Link to="/">
@@ -44,7 +50,9 @@ const Header = () => {
 				<Link to="/checkout">
 					<div className="header__optionBasket">
 						<ShoppingBasketIcon />
-						<span className="header__optionLineTwo header__basketCount">0</span>
+						<span className="header__optionLineTwo header__basketCount">
+							{basket ? basket?.length : 0}
+						</span>
 					</div>
 				</Link>
 			</div>

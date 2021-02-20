@@ -26,7 +26,7 @@ const Home = () => {
 						id="11111"
 						title="Atomic Habits"
 						image="https://m.media-amazon.com/images/I/513Y5o-DYtL.jpg"
-						price="600"
+						price={600}
 						rating={5}
 					/>
 				</div>
