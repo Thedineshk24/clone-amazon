@@ -17,3 +17,10 @@
 	padding: 10px;
 	border-bottom: 1px solid lightgray;
 }
+
+@media (max-width: 768px) {
+	.checkout {
+		display: flex;
+		width: 100%;
+	}
+}
